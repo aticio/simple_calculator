@@ -21,7 +21,14 @@ def test_add_many_numbers():
     result = calculator.add(*numbers)
     assert result == 4950
 
+
 def test_subtract_two_numbers():
     calculator = SimpleCalculator()
     result = calculator.subtract(10, 3)
     assert result == 7
+
+
+def test_mul_two_numbers():
+    calculator = SimpleCalculator()
+    result = calculator.multiply(6, 4)
+    assert result == 24
