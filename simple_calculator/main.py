@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import operator
 from functools import reduce
 
 class SimpleCalculator:
@@ -9,6 +10,4 @@ class SimpleCalculator:
         return a - b
 
     def multiply(self, *args):
-        def multiply2(a, b):
-            return a * b
-        return reduce(multiply2, args)
+        return reduce(operator.mul, args)
