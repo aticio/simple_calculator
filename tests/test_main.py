@@ -20,3 +20,8 @@ def test_add_many_numbers():
     calculator = SimpleCalculator()
     result = calculator.add(*numbers)
     assert result == 4950
+
+def test_subtract_two_numbers():
+    calculator = SimpleCalculator()
+    result = calculator.subtract(10, 3)
+    assert result == 7
