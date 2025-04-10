@@ -39,3 +39,9 @@ def test_mul_many_numbers():
     calculator = SimpleCalculator()
     result = calculator.multiply(*numbers)
     assert result == 362880
+
+
+def test_div_two_numbers_float():
+    calculator = SimpleCalculator()
+    result = calculator.div(13, 2)
+    assert result == 6.5
