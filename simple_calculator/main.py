@@ -10,6 +10,8 @@ class SimpleCalculator:
         return a - b
 
     def multiply(self, *args):
+        if not all(args):
+            raise ValueError
         return reduce(operator.mul, args)
     
     def div(self, a, b):
