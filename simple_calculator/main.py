@@ -21,15 +21,15 @@ class SimpleCalculator:
             return float('inf')
     
     def avg(self, it, ut=None, lt=None):
-        if not len(it):
-            return 0
+        _it = it[:]
         
-        if not lt:
-            lt = min(it)
+        if lt:
+            _it = [x for x in _it if x >= lt]
+        
+        if ut:
+            _it = [x for x in _it if x <= ut]
 
-        if not ut:
-            ut = max(it)
-        
-        _it = [x for x in it if x >=lt and x <= ut]
+        if not(len(_it)):
+            return 0
 
         return sum(_it) / len(_it)
