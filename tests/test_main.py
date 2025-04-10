@@ -45,3 +45,9 @@ def test_div_two_numbers_float():
     calculator = SimpleCalculator()
     result = calculator.div(13, 2)
     assert result == 6.5
+
+
+def test_div_by_zero_returns_inf():
+    calculator = SimpleCalculator()
+    result = calculator.div(5, 0)
+    assert result == float('inf')
